@@ -1,11 +1,17 @@
 import './App.css';
-import Navbar from './components/client/header/Navbar';
+
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import AdminIndex from './layouts/admin/AdminIndex';
 
 function App() {
   return (
-    <div className='container mx-auto'>
-      <Navbar/>
-    </div>
+    <>
+      <Router>
+        <Switch>
+          <Route exact path="/admin/dashboard" component={AdminIndex} />
+        </Switch>
+      </Router>
+    </>
   );
 }
 
