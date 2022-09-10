@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+nav li {
+  @apply
+  hover:bg-orange-700
+  hover:text-[#fff]
+  p-3
+
+}
 /* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
