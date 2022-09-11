@@ -10,20 +10,20 @@
           <!-- ***** Logo End ***** -->
           <!-- ***** Menu Start ***** -->
           <ul class="nav">
-            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+            <li class="scroll-to-section"><a href="/" class="active">Home</a></li>
 
             <li class="submenu">
               <a href="javascript:;">Loans</a>
               <ul>
-                <li><a href="#">Regular Loans</a></li>
-                <li><a href="#">Express Loans</a></li>
-                <li><a href="#">Special Loans</a></li>
+                <li><a href="/regular-loans">Regular Loans</a></li>
+                <li><a href="/express-loans">Express Loans</a></li>
+                <li><a href="/special-loans">Special Loans</a></li>
               </ul>
             </li>
 
-            <li class="scroll-to-section"><a href="#about">About Us</a></li>
+            <li class="scroll-to-section"><a href="/about-us">About Us</a></li>
 
-            <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li> 
+            <li class="scroll-to-section"><a href="/contact-us">Contact Us</a></li> 
                 
           <!-- 
               <li class="submenu">

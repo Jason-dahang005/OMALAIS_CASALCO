@@ -27,6 +27,11 @@ use Illuminate\Support\Facades\Route;
 // CLIENT SIDE START ---------------------------------------------------------
 
 Route::view('/', 'client.home');
+Route::view('/regular-loans', 'client.regular-loans');
+Route::view('/express-loans', 'client.express-loans');
+Route::view('/special-loans', 'client.special-loans');
+Route::view('/contact-us', 'client.contact-us');
+Route::view('/about-us', 'client.about-us');
 
 // CLIENT SIDE END   ---------------------------------------------------------
 
