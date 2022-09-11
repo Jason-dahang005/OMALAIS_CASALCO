@@ -2,10 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\admin\DashboardController;
-use App\Http\Controllers\admin\MembershipController;
-use App\Http\Controllers\admin\LoanController;
-use App\Http\Controllers\admin\MemberController;
+// use App\Http\Controllers\admin\DashboardController;
+// use App\Http\Controllers\admin\MembershipController;
+// use App\Http\Controllers\admin\LoanController;
+// use App\Http\Controllers\admin\MemberController;
+use App\Http\Controllers\officer\OfficerDashboardController;
+use App\Http\Controllers\officer\MembershipAppController;
+use App\Http\Controllers\officer\LoanAppController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +22,10 @@ use App\Http\Controllers\admin\MemberController;
 |
 */
 
-Route::resource('/', DashboardController::class);
-Route::resource('/membership', MembershipController::class);
-Route::resource('/loan', LoanController::class);
-Route::resource('/member', MemberController::class);
+Route::resource('/', OfficerDashboardController::class);
+Route::resource('/membership', MembershipAppController::class);
+Route::resource('/loan', LoanAppController::class);
+
 
 
 Route::get('/approved-loans', function () {
