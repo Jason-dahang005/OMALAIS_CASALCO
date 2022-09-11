@@ -18,7 +18,7 @@
 						<li>
 							<a class="dropdown-toggle" data-toggle="dropdown">
 								<img class="img-responsive rounded-circle" src="../pluto/images/layout_img/user_img.jpg" alt="#" />
-								<span class="name_user">John David</span>
+								<span class="name_user">Jason D.</span>
 							</a>
 							<div class="dropdown-menu">
 								<a class="dropdown-item" href="profile.html">My Profile</a>
