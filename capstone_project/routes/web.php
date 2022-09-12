@@ -32,6 +32,7 @@ Route::view('/express-loans', 'client.express-loans');
 Route::view('/special-loans', 'client.special-loans');
 Route::view('/contact-us', 'client.contact-us');
 Route::view('/about-us', 'client.about-us');
+Route::view('/membership-application', 'client.membership-application');
 
 // CLIENT SIDE END   ---------------------------------------------------------
 
