@@ -1,91 +1,265 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+@extends('client.index')
 
-	<title>CASALCO - Capitol Savings And Loan Cooperative</title>
-	<!--
-	TemplateMo 558 Klassy Cafe
-	https://templatemo.com/tm-558-klassy-cafe
-	-->
-	<!-- Additional CSS Files -->
-	<link rel="stylesheet" type="text/css" href="../klassy/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../klassy/css/font-awesome.css">
-	<link rel="stylesheet" href="../klassy/css/templatemo-klassy-cafe.css">
-	<link rel="stylesheet" href="../klassy/css/owl-carousel.css">
-	<link rel="stylesheet" href="../klassy/css/lightbox.css">
-</head>
-<body>
-	<header class="header-area header-sticky">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<nav class="main-nav">
-						<!-- ***** Logo Start ***** -->
-						<a href="index.html" class="logo">
-							<img src="../klassy/images/klassy-logo.png" align="klassy cafe html template">
-						</a>
-						<!-- ***** Logo End ***** -->
-						<!-- ***** Menu Start ***** -->
-						{{-- <ul class="nav">
-							<li class="scroll-to-section"><a href="/" class="active">Home</a></li>
-	
-							<li class="submenu">
-								<a href="javascript:;">Loans</a>
-								<ul>
-									<li><a href="/regular-loans">Regular Loans</a></li>
-									<li><a href="/express-loans">Express Loans</a></li>
-									<li><a href="/special-loans">Special Loans</a></li>
-								</ul>
-							</li>
-	
-							<li class="scroll-to-section"><a href="/about-us">About Us</a></li>
-	
-							<li class="scroll-to-section"><a href="/contact-us">Contact Us</a></li> 
-									
-						
-	
-							<li class="submenu">
-								<a href="javascript:;">My Account</a>
-								<ul>
-									<li><a href="#">Register</a></li>
-									<li><a href="#">Login</a></li>
-								</ul>
-							</li>
-							
-						</ul>         --}}
-						<a class='menu-trigger'>
-							<span>Menu</span>
-						</a>
-						<!-- ***** Menu End ***** -->
-					</nav>
-				</div>
-			</div>
-		</div>
-	</header>
+@section('client_content')
 
-	<div class="contact-form">
+
+<div class="contact-form">
 		<form id="contact" action="" method="post">
-			<div class="row">
-				<div class="col-lg-12">
-						<h4>Contact Us</h4>
+			<div class="row pt-5">
+				<div class="col-lg-2">
+						
 				</div>
-				<div class="col-lg-6 col-sm-12">
+
+				<div class="col-lg-8 border">
+					<div class="row">
+					<div class="col-lg-12">
+						<h4 class="pt-5">Casalco Membership Form</h4>
+						<hr class="line">
+						<h5 class ="font-weight-bold">Personal Information</h5>
+						<p class="font-weight-lighter">We require your personal information to ensure calidty of you memnbership application</p>
+						<hr>
+						
+					</div>
+				
+				
+				
+						
+				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="name" type="text" id="name" placeholder="Your Name*" required="">
+						<input name="Fname" type="text" id="Fname" placeholder="First Name" required="">
 					</fieldset>
 				</div>
-				<div class="col-lg-6 col-sm-12">
+				<div class="col-lg-4 col-sm-12">
+					<fieldset>
+						<input name="Mname" type="text" id="Mname" placeholder="Middle Name" required="">
+					</fieldset>
+				</div>
+				<div class="col-lg-4 col-sm-12">
+					<fieldset>
+						<input name="Lname" type="text" id="Lname" placeholder="Last Name" required="">
+					</fieldset>
+				</div>
+				<div class="col-lg-4 col-sm-12">
+					<fieldset>
+						<input name="suffix" type="text" id="suffix" placeholder="Suffix" required="">
+					</fieldset>
+				</div>
+				<div class="col-lg-4 col-sm-12">
+					<select name="gender" id="gender">
+						<option value="" disabled selected >Gender</option>
+						<option value="Male">Male</option>
+						<option value="Female">Female</option>
+						
+					</select>
+				</div>
+				<div class="col-lg-4 col-sm-12">
+					<fieldset>
+						<input name="birhday" type="date" id="birhday" placeholder="Birthday" required="">
+					</fieldset>
+				</div>
+				<div class="col-lg-4 col-sm-12">
+					<fieldset>
+						<input name="brth-place" type="text" id="brth-place" placeholder="Birth Place" required="">
+					</fieldset>
+				</div>
+				<div class="col-lg-4 col-sm-12">
+					<select name="Unit" id="Unit">
+						<option value="" disabled selected >Unit</option>
+						<option value="CU(main)">CU(main)</option>
+						<option value="CUMC">CUMC</option>
+						<option value="CUBE">CUBE</option>
+						<option value="Support Zebra">Support Zebra</option>
+						<option value="Associate">Associate</option>
+					</select>
+				</div>
+				<div class="col-lg-4 col-sm-12">
+					<fieldset>
+						<input name="occ" type="text" id="occ" placeholder="Occupation" required="">
+					</fieldset>
+				</div>
+				<div class="col-lg-4 col-sm-12">
+					<fieldset>
+						<input name="educ" type="text" id="educ" placeholder="Educ. Attianment" required="">
+					</fieldset>
+				</div>
+				<div class="col-lg-4 col-sm-12">
+					<fieldset>
+						<input name="mic" type="text" id="mic" placeholder="Monthly Income" required="">
+					</fieldset>
+				</div>
+				<div class="col-lg-4 col-sm-12">
+					<select name="cs" id="cs">
+						<option value="" disabled selected >Civil Status</option>
+						<option value="Single">Single</option>
+						<option value="Married">Married</option>
+						<option value="Divorce">Divorced</option>
+						<option value="Siparated">Siparated</option>
+						<option value="Widowed">Widowed</option>
+					</select>
+				</div>
+				<div class="col-lg-4 col-sm-12">
+					<fieldset>
+						<input name="rlg" type="text" id="rlg" placeholder="Religion" required="">
+					</fieldset>
+				</div>
+				<div class="col-lg-4 col-sm-12">
+					<fieldset>
+						<input name="cn" type="text" id="cn" placeholder="Contact Number" required="">
+					</fieldset>
+				</div>
+				<div class="col-lg-4 col-sm-12">
+					<fieldset>
+						<input name="email" type="email" id="email" placeholder="Email Address" required="">
+					</fieldset>
+				</div>
+				<div class="col-lg-4 col-sm-12">
+					<fieldset>
+						<input name="nod" type="text" id="nod" placeholder="Number of Dependents" required="">
+					</fieldset>
+				</div>
+				<div class="col-lg-12">
+						<h5 class ="font-weight-bold">Spuose Personal Information</h5>
+						<hr>	
+				</div>
+					
+					<div class="col-lg-8 col-sm-12">
+					<fieldset>
+						<input name="name" type="text" id="name" placeholder="Full Name" required="">
+					</fieldset>
+					</div>
+					<div class="col-lg-4 col-sm-12">
+					<fieldset>
+						<input name="age" type="text" id="age" placeholder="Age" required="">
+					</fieldset>
+					</div>
+					<div class="col-lg-6 col-sm-12">
+					<fieldset>
+						<input name="socc" type="text" id="socc" placeholder="Occupation" required="">
+					</fieldset>
+					</div>
+					<div class="col-lg-6 col-sm-12">
+					<fieldset>
+						<input name="smi" type="text" id="smi" placeholder="Monthly Income" required="">
+					</fieldset>
+					</div>
+					<div class="col-lg-6 col-sm-12">
+					<fieldset>
+						<input name="em" type="text" id="em" placeholder="Employer's Name" required="">
+					</fieldset>
+					</div>
+					<div class="col-lg-6 col-sm-12">
+					<fieldset>
+						<input name="scn" type="text" id="scn" placeholder="Contact Number" required="">
+					</fieldset>
+					</div>
+					<div class="col-lg-12">
+						<h5 class ="font-weight-bold">Nomination of Benificiary</h5>
+						<hr>	
+					</div>
+					<div class="col-lg-6 col-sm-12">
+					<fieldset>
+						<input name="b-name" type="text" id="b-name" placeholder="Full Name" required="">
+					</fieldset>
+					</div>
+					<div class="col-lg-6 col-sm-12">
+					<fieldset>
+						<input name="rls" type="text" id="rls" placeholder="Relationship" required="">
+					</fieldset>
+					</div>
+					<div class="col-lg-8 col-sm-12">
+					<fieldset>
+						<input name="b-add" type="text" id="badd" placeholder="Address" required="">
+					</fieldset>
+					</div>
+					<div class="col-lg-4 col-sm-12">
+					<fieldset>
+						<input name="b-age" type="text" id="bage" placeholder="Age" required="">
+					</fieldset>
+					</div>
+					
+					<div class="col-lg-12">
+						<p >Mother's Maiden Name</p>
+							
+					</div>
+					<div class="col-lg-4 col-sm-12">
+						<fieldset>
+							<input name="b-Lname" type="text" id="b-Lname" placeholder="Last Name" required="">
+						</fieldset>
+					</div>
+					<div class="col-lg-4 col-sm-12">
+						<fieldset>
+							<input name="b-Fname" type="text" id="b-Fname" placeholder="First Name" required="">
+						</fieldset>
+					</div>
+					<div class="col-lg-4 col-sm-12">
+						<fieldset>
+							<input name="b-Mname" type="text" id="b-Mname" placeholder="Middle Name" required="">
+						</fieldset>
+					</div>
+					<div class="col-lg-12 pb-3">
+					<fieldset>
+						<!-- <button type="submit" id="form-submit" class="main-button-icon w-25 mr-5">Add a Benificiary</button> -->
+						<a class="button" href="#" role="button">Add a Benificiary</a>
+					</fieldset>
+					
+				</div> 
+					<div class="col-lg-12">
+						<h5 class ="font-weight-bold mt-2">Government ID Number</h5>
+						<p class="font-weight-lighter">The fields below are optional but we encourageyou to provide the information</p>
+						<hr>	
+					</div>
+					<div class="col-lg-4 col-sm-12">
+						<fieldset>
+							<input name="tin" type="text" id="tin" placeholder="Tax Identification Number" required="">
+						</fieldset>
+					</div>
+					<div class="col-lg-4 col-sm-12">
+						<fieldset>
+							<input name="sss" type="text" id="sss" placeholder="SSS Number" required="">
+						</fieldset>
+					</div>
+					<div class="col-lg-12">
+						<h5 class ="font-weight-bold">Attach File</h5>
+						<hr>	
+					</div>
+					<div class="col-lg-12">
+						<fieldset>
+						<label class="form-label" for="customFile">Attach Selfie Picture</label>
+						<input type="file" class="w-28 mt-2" id="customFile" >
+						</fieldset>
+					</div>
+					<div class="col-lg-12">
+						<fieldset>
+						<label class="form-label" for="customFile">Attach Employee ID</label>
+						<input type="file" class="w-28 mt-2" id="customFile" >
+						</fieldset>
+					</div>
+
+					
+					
+				<div class="col-lg-12 pb-3">
+					<fieldset>
+						
+					<button type="button" id="form-submit" class="main-button-icon w-25 mt-5 ">Validate</button>
+					<!-- <a class="btn btn-primary main-button-icon w-25 mt-5 " href="#" role="button">Validate</a> -->
+					</fieldset>
+				</div> 
+			
+				
+				</div>
+				
+				</div>
+				
+				
+
+				
+				
+				<!-- <div class="col-lg-3 col-sm-12">
 					<fieldset>
 					<input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
 				</fieldset>
-				</div>
-				{{-- <div class="col-lg-6 col-sm-12">
+				</div> -->
+				<!-- {{-- <div class="col-lg-6 col-sm-12">
 					<fieldset>
 						<input name="phone" type="text" id="phone" placeholder="Phone Number*" required="">
 					</fieldset>
@@ -128,8 +302,8 @@
 								<option name="Dinner" id="Dinner">Dinner</option>
 						</select>
 					</fieldset>
-				</div> --}}
-				<div class="col-lg-12">
+				</div> --}} -->
+				<!-- <div class="col-lg-12">
 					<fieldset>
 						<textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
 					</fieldset>
@@ -138,49 +312,11 @@
 					<fieldset>
 						<button type="submit" id="form-submit" class="main-button-icon">Send A Message</button>
 					</fieldset>
-				</div>
+				</div> -->
 			</div>
 		</form>
 </div>
 
 
-	<!-- jQuery -->
-	<script src="../klassy/js/jquery-2.1.0.min.js"></script>
 
-	<!-- Bootstrap -->
-	<script src="../klassy/js/popper.js"></script>
-	<script src="../klassy/js/bootstrap.min.js"></script>
-
-	<!-- Plugins -->
-	<script src="../klassy/js/owl-carousel.js"></script>
-	<script src="../klassy/js/accordions.js"></script>
-	<script src="../klassy/js/datepicker.js"></script>
-	<script src="../klassy/js/scrollreveal.min.js"></script>
-	<script src="../klassy/js/waypoints.min.js"></script>
-	<script src="../klassy/js/jquery.counterup.min.js"></script>
-	<script src="../klassy/js/imgfix.min.js"></script> 
-	<script src="../klassy/js/slick.js"></script> 
-	<script src="../klassy/js/lightbox.js"></script> 
-	<script src="../klassy/js/isotope.js"></script> 
-	
-	<!-- Global Init -->
-	<script src="../klassy/js/custom.js"></script>
-	<script>
-
-		$(function() {
-			var selectedClass = "";
-			$("p").click(function(){
-			selectedClass = $(this).attr("data-rel");
-			$("#portfolio").fadeTo(50, 0.1);
-					$("#portfolio div").not("."+selectedClass).fadeOut();
-			setTimeout(function() {
-				$("."+selectedClass).fadeIn();
-				$("#portfolio").fadeTo(50, 1);
-			}, 500);
-					
-			});
-		});
-
-	</script>
-</body>
-</html>
+@endsection
