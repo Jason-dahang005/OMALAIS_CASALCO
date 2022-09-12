@@ -23,21 +23,42 @@
                     <!-- Item -->
                     <div class="item">
                       <div class="img-fill">
-                          <img src="../klassy/images/slide-01.jpg" alt="">
+                          <img src="../klassy/images/Casalco-1.jpg" alt="">
                       </div>
                     </div>
                     <!-- // Item -->
                     <!-- Item -->
                     <div class="item">
                       <div class="img-fill">
-                          <img src="../klassy/images/slide-02.jpg" alt="">
+                          <img src="../klassy/images/Casalco-4.jpg" alt="">
                       </div>
                     </div>
                     <!-- // Item -->
                     <!-- Item -->
                     <div class="item">
                       <div class="img-fill">
-                          <img src="../klassy/images/slide-03.jpg" alt="">
+                          <img src="../klassy/images/Casalco-3.jpg" alt="">
+                      </div>
+                    </div>
+                    <!-- // Item -->
+                    <!-- Item -->
+                    <div class="item">
+                      <div class="img-fill">
+                          <img src="../klassy/images/Casalco-5.jpg" alt="">
+                      </div>
+                    </div>
+                    <!-- // Item -->
+                    <!-- Item -->
+                    <div class="item">
+                      <div class="img-fill">
+                          <img src="../klassy/images/Casalco-6.jpg" alt="">
+                      </div>
+                    </div>
+                    <!-- // Item -->
+                    <!-- Item -->
+                    <div class="item">
+                      <div class="img-fill">
+                          <img src="../klassy/images/Casalco-7.jpg" alt="">
                       </div>
                     </div>
                     <!-- // Item -->
