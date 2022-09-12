@@ -2,7 +2,7 @@
   <div class="sidebar_blog_1">
     <div class="sidebar-header">
       <div class="logo_section">
-        <a href="index.html"><img class="logo_icon img-responsive" src="images/logo/logo_icon.png" alt="#" /></a>
+        <a href="/officer/officer/dashboard"><img class="logo_icon img-responsive" src="../pluto/images/logo/logo_icon.png" alt="#" /></a>
       </div>
     </div>
     <div class="sidebar_user_info">
@@ -19,25 +19,25 @@
   <div class="sidebar_blog_2">
     <ul class="list-unstyled components">
       <li class="active">
-        <a href="/"><i class="fa fa-dashboard yellow_color"></i> <span>Dashboard</span></a>
+        <a href="/officer/dashboard"><i class="fa fa-dashboard yellow_color"></i> <span>Dashboard</span></a>
       </li>
       <li>
         <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-folder-open orange_color"></i> <span>Applications</span></a>
         <ul class="collapse list-unstyled" id="element">
-          <li><a href="/membership">> <span>Membership</span></a></li>
-          <li><a href="/loan">> <span>Loan</span></a></li>
+          <li><a href="/officer/membership">> <span>Membership</span></a></li>
+          <li><a href="/officer/loan">> <span>Loan</span></a></li>
         </ul>
       </li>
 
       <li>
-        <a href="#element1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-folder-open orange_color"></i> <span>Reports</span></a>
+        <a href="#element1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-list-alt purple_color"></i> <span>Reports</span></a>
         <ul class="collapse list-unstyled" id="element1">
-          <li><a href="/membership">> <span>Pre-approve Membership </span></a></li>
-          <li><a href="/loan">> <span>Pre-approve Loan</span></a></li>
+          <li><a href="/officer/membership">> <span>Pre-approve Membership </span></a></li>
+          <li><a href="/officer/loan">> <span>Pre-approve Loan</span></a></li>
         </ul>
       </li>
-      <!-- <li><a href="/member"><i class="fa fa-users red_color"></i> <span>Members</span></a></li> -->
-      <!-- <li><a href="/approved-loans"><i class="fa fa-clipboard blue1_color"></i> <span>Reports</span></a></li> -->
+      <!-- <li><a href="/officer/member"><i class="fa fa-users red_color"></i> <span>Members</span></a></li> -->
+      <!-- <li><a href="/officer/approved-loans"><i class="fa fa-clipboard blue1_color"></i> <span>Reports</span></a></li> -->
       {{-- <li>
         <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clipboard blue2_color"></i> <span>Reports</span></a>
         <ul class="collapse list-unstyled" id="apps">
