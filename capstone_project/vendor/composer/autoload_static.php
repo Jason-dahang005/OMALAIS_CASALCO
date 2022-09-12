@@ -329,8 +329,8 @@ class ComposerStaticInit0c294f2ce8aa2944cc980a2653073055
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -497,6 +497,13 @@ class ComposerStaticInit0c294f2ce8aa2944cc980a2653073055
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\admin\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/DashboardController.php',
+        'App\\Http\\Controllers\\admin\\LoanController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/LoanController.php',
+        'App\\Http\\Controllers\\admin\\MemberController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/MemberController.php',
+        'App\\Http\\Controllers\\admin\\MembershipController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/MembershipController.php',
+        'App\\Http\\Controllers\\officer\\LoanAppController' => __DIR__ . '/../..' . '/app/Http/Controllers/officer/LoanAppController.php',
+        'App\\Http\\Controllers\\officer\\MembershipAppController' => __DIR__ . '/../..' . '/app/Http/Controllers/officer/MembershipAppController.php',
+        'App\\Http\\Controllers\\officer\\OfficerDashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/officer/OfficerDashboardController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',

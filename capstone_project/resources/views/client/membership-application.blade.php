@@ -4,7 +4,7 @@
 
 
 <div class="contact-form">
-		<form id="contact" action="" method="post">
+		<form id="contact" action="membership_app" method="post">
 			<div class="row pt-5">
 				<div class="col-lg-2">
 						
@@ -54,12 +54,17 @@
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="birhday" type="date" id="birhday" placeholder="Birthday" required="">
+						<input name="bod" type="date" id="birhday" placeholder="Birthday" required="">
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
 						<input name="brth-place" type="text" id="brth-place" placeholder="Birth Place" required="">
+					</fieldset>
+				</div>
+				<div class="col-lg-4 col-sm-12">
+					<fieldset>
+						<input name="Address" type="text" id="suffix" placeholder="Address" required="">
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
@@ -196,13 +201,13 @@
 							<input name="b-Mname" type="text" id="b-Mname" placeholder="Middle Name" required="">
 						</fieldset>
 					</div>
-					<div class="col-lg-12 pb-3">
+					<!-- <div class="col-lg-12 pb-3">
 					<fieldset>
-						<!-- <button type="submit" id="form-submit" class="main-button-icon w-25 mr-5">Add a Benificiary</button> -->
+						<button type="submit" id="form-submit" class="main-button-icon w-25 mr-5">Add a Benificiary</button>
 						<a class="button" href="#" role="button">Add a Benificiary</a>
 					</fieldset>
 					
-				</div> 
+				</div>  -->
 					<div class="col-lg-12">
 						<h5 class ="font-weight-bold mt-2">Government ID Number</h5>
 						<p class="font-weight-lighter">The fields below are optional but we encourageyou to provide the information</p>
@@ -225,13 +230,13 @@
 					<div class="col-lg-12">
 						<fieldset>
 						<label class="form-label" for="customFile">Attach Selfie Picture</label>
-						<input type="file" class="w-28 mt-2" id="customFile" >
+						<input type="file" class="w-28 mt-2" id="customFile" required="image" >
 						</fieldset>
 					</div>
 					<div class="col-lg-12">
 						<fieldset>
 						<label class="form-label" for="customFile">Attach Employee ID</label>
-						<input type="file" class="w-28 mt-2" id="customFile" >
+						<input type="file" class="w-28 mt-2" id="customFile" required="image" >
 						</fieldset>
 					</div>
 
