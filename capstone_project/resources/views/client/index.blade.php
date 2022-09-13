@@ -25,7 +25,9 @@
 
 	@yield('client_content')
 
-	@include('client.footer')
+	@if(!Request::is("login") && !Request::is("register") && !Request::is("membership-application"))
+		@include('client.footer')
+	@endif
 
 	<!-- jQuery -->
 	<script src="../klassy/js/jquery-2.1.0.min.js"></script>

@@ -71,7 +71,7 @@
 <!-- ***** Main Banner Area End ***** -->
 
 <!-- ***** Menu Area Starts ***** -->
-<section class="section" id="menu">
+{{-- <section class="section" id="menu">
   <div class="container">
 		<div class="row">
 			<div class="col-lg-4">
@@ -99,11 +99,11 @@
 			</div>
 		</div>
   </div>
-</section>
+</section> --}}
 <!-- ***** Menu Area Ends ***** -->
 
 <!-- ***** Chefs Area Starts ***** -->
-<section class="section" id="chefs">
+{{-- <section class="section" id="chefs">
   <div class="container">
 		<div class="row">
 			<div class="col-lg-4 offset-lg-4 text-center">
@@ -167,13 +167,13 @@
 			</div>
 		</div>
   </div>
-</section>
+</section> --}}
 <!-- ***** Chefs Area Ends ***** -->
 
 
 
 <!-- ***** Menu Area Starts ***** -->
-<section class="section" id="offers">
+{{-- <section class="section" id="offers">
   <div class="container">
       <div class="row">
           <div class="col-lg-4 offset-lg-4 text-center">
@@ -435,7 +435,7 @@
           </div>
       </div>
   </div>
-</section>
+</section> --}}
 <!-- ***** Chefs Area Ends ***** --> 
 
 @endsection

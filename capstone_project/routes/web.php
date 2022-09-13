@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
 
 // use App\Http\Controllers\admin\DashboardController;
@@ -22,6 +23,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::middleware(['auth', 'isAdmin'])->group(function() { 
+  // ADMIN SIDE START ----------------------------------------------------------
+
+  Route::view('/admin/dashboard', 'admin.dashboard');
+  Route::view('/admin/membership', 'admin.membership');
+  Route::view('/admin/loan', 'admin.loan');
+  Route::view('/admin/approved-loans', 'admin.approved-loans');
+  Route::view('/admin/member', 'admin.member');
+
+  // ADMIN SIDE END  -----------------------------------------------------------
+});
 
 
 // CLIENT SIDE START ---------------------------------------------------------
@@ -86,3 +98,7 @@ Route::view('/admin/member', 'admin.member');
 // Route::get('/approved-loans', function () {
 //     return view('admin.approved-loans');
 // });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
