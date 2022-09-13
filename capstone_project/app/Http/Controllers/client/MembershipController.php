@@ -122,7 +122,7 @@ class MembershipController extends Controller
         $insertMember->TIN=$r->TIN;
         $insertMember->SSSnum=$r->SSSnum;
         $insertMember->email=$r->email;
-        $insertMember->numDependents=$r->numDependents;
+        $insertMember->NumDependents=$r->NumDependents;
         $insertMember->spouseFname=$r->spouseFname;
         $insertMember->spouseAge=$r->spouseAge;
         $insertMember->spouseOcc=$r->spouseOcc;
@@ -142,7 +142,7 @@ class MembershipController extends Controller
         $created=$insertMember->save();
         
          if($created){
-             return redirect('membership_appication')->with('msg','Application Submit Successfully');
+             return redirect('membership-application')->with('msg','Application Submit Successfully');
          }
   
     }

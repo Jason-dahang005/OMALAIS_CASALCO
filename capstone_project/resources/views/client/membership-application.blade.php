@@ -2,6 +2,19 @@
 
 @section('client_content')
 
+<!-- @if(session()->get('msg'))
+			<div class="alert alert-success alert-dismissible fade show" role ="alert">
+
+				{{ session()->get('msg')}}
+
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					
+				</button>
+				
+
+			</div>
+			@endif -->
 
 <div class="contact-form">
 		<form action="membership_app" method="post">
@@ -42,7 +55,7 @@
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="suffix" type="text" id="suffix" placeholder="Suffix" required="">
+						<input name="suffix" type="text" id="suffix" placeholder="Suffix">
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
@@ -56,6 +69,11 @@
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
 						<input name="dob" type="date" id="dob" placeholder="Birthday" required="">
+						<!-- <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+							<input placeholder="Select date" type="text" name="dob" id="dob" class="form-control">
+							<label for="example">Birthday</label>
+							<i class="fas fa-calendar input-prefix"></i>
+						</div> -->
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
@@ -120,7 +138,7 @@
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="NumDependents" type="text" id="NumDependents placeholder="Number of Dependents" required="">
+						<input name="NumDependents" type="text" id="NumDependents" placeholder="Number of Dependents" required="">
 					</fieldset>
 				</div>
 				<div class="col-lg-12">

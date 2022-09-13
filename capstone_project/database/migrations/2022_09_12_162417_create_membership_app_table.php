@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('Lname');
             $table->string('suffix')->nullable();
             $table->string('gender');
-            $table->date('dob')->nullable();
+            $table->date('dob');
             $table->string('Bplace');
             $table->string('address');
             $table->string('unit');
@@ -33,7 +33,7 @@ return new class extends Migration
             $table->integer('TIN');
             $table->integer('SSSnum');
             $table->string('email')->unique();
-            $table->string('NumDependents')->nullable();
+            $table->string('NumDependents');
             $table->string('spouseFname');
             $table->string('spouseAge');
             $table->string('spouseOcc');
