@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="../klassy/css/templatemo-klassy-cafe.css">
 	<link rel="stylesheet" href="../klassy/css/owl-carousel.css">
 	<link rel="stylesheet" href="../klassy/css/lightbox.css">
+	
 </head>
 <body>
 	@include('client.header')
@@ -50,6 +51,7 @@
 	
 	<!-- Global Init -->
 	<script src="../klassy/js/custom.js"></script>
+	
 	<script>
 
 		$(function() {
