@@ -4,7 +4,7 @@
 			<button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
 			<div class="logo_section">
 				<a href="index.html">
-					<img class="img-responsive" src="../pluto/images/logo/logo.png" alt="#" />
+					<img class="img-responsive" src="../pluto/images/logo/CasalcoLogo-4.png" alt="#" />
 				</a>
 			</div>
 			<div class="right_topbar">

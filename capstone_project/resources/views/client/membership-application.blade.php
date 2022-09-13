@@ -27,7 +27,7 @@
 				<div class="col-lg-8 border">
 					<div class="row">
 					<div class="col-lg-12">
-						<h4 class="pt-5">Casalco Membership Form</h4>
+						<h4 class="pt-5 justify-content-center">Casalco Membership Form</h4>
 						<hr class="line">
 						<h5 class ="font-weight-bold">Personal Information</h5>
 						<p class="font-weight-lighter">We require your personal information to ensure calidty of you memnbership application</p>
