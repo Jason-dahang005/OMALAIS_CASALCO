@@ -27,7 +27,7 @@ class Membership extends Model
         'TIN',
         'SSSnum',
         'email',
-        'numDependents',
+        'NumDependents',
         'spouseFname',
         'spouseAge',
         'spouseOcc',

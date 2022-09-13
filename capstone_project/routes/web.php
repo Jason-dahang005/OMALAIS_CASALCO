@@ -47,6 +47,8 @@ Route::view('/contact-us', 'client.contact-us');
 Route::view('/about-us', 'client.about-us');
 Route::view('/membership-application', 'client.membership-application');
 Route::post('/membership_app',[MembershipController::class, 'membership_app']);
+Route::view('/pre_seminar', 'client.pre_seminar');
+
 
 
 
