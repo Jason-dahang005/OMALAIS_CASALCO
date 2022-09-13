@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 // use App\Http\Controllers\admin\LoanController;
 // use App\Http\Controllers\admin\MemberController;
 // use App\Http\Controllers\officer\OfficerDashboardController;
-// use App\Http\Controllers\officer\MembershipAppController;
+ use App\Http\Controllers\officer\MembershipAppController;
 // use App\Http\Controllers\officer\LoanAppController;
 
 use App\Http\Controllers\client\MembershipController;
@@ -63,7 +63,7 @@ Route::view('/officer/loan', 'officer.loan');
 Route::view('/officer/membership', 'officer.membership');
 Route::view('/officer/pre-approve-loans', 'officer.pre-approve-loans');
 Route::view('/officer/pre-approved-membership', 'officer.pre-approved-membership');
-
+Route::get('/officer/membership',[MembershipAppController::class, 'memberapp_list']);
 // OFFICER SIDE END   --------------------------------------------------------
 
 // ===================================================================================================================

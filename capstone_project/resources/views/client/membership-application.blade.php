@@ -249,9 +249,17 @@
 					<div class="col-lg-12">
 						<fieldset>
 						<label class="form-label" for="selfiepic">Attach Selfie Picture</label>
-						<input type="file" class="w-28 mt-2" name="selfiepic" id="selfiepic" required="image" >
+						<!-- <input type="file" class="w-28 mt-2" name="selfiepic" id="selfiepic" required="image" > -->
+						<input type="file" class="form-control" id="customFile" name="selfiepic" onchange="previewFile(this)">
+						
+							<img src="" alt="" id="previewImg" style="max-width: 130px; margin-top: 20px;">
+						
 						</fieldset>
 					</div>
+					<div class="col-lg-12">
+					<img src="" alt="" id="previewImg" style="max-width: 130px; margin-top: 20px;">
+					</div>
+					
 					<div class="col-lg-12">
 						<fieldset>
 						<label class="form-label" for="empIDpic">Attach Employee ID</label>

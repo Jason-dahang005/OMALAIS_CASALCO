@@ -4,6 +4,7 @@ namespace App\Http\Controllers\officer;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Membership;
 
 class MembershipAppController extends Controller
 {
@@ -13,7 +14,7 @@ class MembershipAppController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {   
         return view('officer.membership');
     }
 
@@ -33,9 +34,11 @@ class MembershipAppController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function memberapp_list()
     {
-        //
+        $member_app = Membership::all();
+        return view('officer.membership')->with('member_app', $member_app);
+        
     }
 
     /**
