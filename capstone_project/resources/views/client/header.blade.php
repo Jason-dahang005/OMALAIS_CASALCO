@@ -5,7 +5,7 @@
         <nav class="main-nav">
           <!-- ***** Logo Start ***** -->
           <a href="index.html" class="logo">
-            <img src="../klassy/images/klassy-logo.png" align="klassy cafe html template">
+            <img src="../klassy/images/CasalcoLogo-3.png" align="klassy cafe html template">
           </a>
           <!-- ***** Logo End ***** -->
           <!-- ***** Menu Start ***** -->
