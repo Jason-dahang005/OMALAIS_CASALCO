@@ -4,7 +4,8 @@
 
 
 <div class="contact-form">
-		<form id="contact" action="" method="post">
+		<form action="membership_app" method="post">
+		
 			<div class="row pt-5">
 				<div class="col-lg-2">
 						
@@ -23,7 +24,7 @@
 				
 				
 				
-						
+					@csrf	
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
 						<input name="Fname" type="text" id="Fname" placeholder="First Name" required="">
@@ -54,16 +55,21 @@
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="birhday" type="date" id="birhday" placeholder="Birthday" required="">
+						<input name="dob" type="date" id="dob" placeholder="Birthday" required="">
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="brth-place" type="text" id="brth-place" placeholder="Birth Place" required="">
+						<input name="Bplace" type="text" id="Bplace" placeholder="Birth Place" required="">
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
-					<select name="Unit" id="Unit">
+					<fieldset>
+						<input name="address" type="text" id="suffix" placeholder="Address" required="">
+					</fieldset>
+				</div>
+				<div class="col-lg-4 col-sm-12">
+					<select name="unit" id="unit">
 						<option value="" disabled selected >Unit</option>
 						<option value="CU(main)">CU(main)</option>
 						<option value="CUMC">CUMC</option>
@@ -74,7 +80,7 @@
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="occ" type="text" id="occ" placeholder="Occupation" required="">
+						<input name="occupation" type="text" id="occupation" placeholder="Occupation" required="">
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
@@ -84,11 +90,11 @@
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="mic" type="text" id="mic" placeholder="Monthly Income" required="">
+						<input name="MI" type="text" id="MI" placeholder="Monthly Income" required="">
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
-					<select name="cs" id="cs">
+					<select name="civilStatus" id="civilStatus">
 						<option value="" disabled selected >Civil Status</option>
 						<option value="Single">Single</option>
 						<option value="Married">Married</option>
@@ -99,12 +105,12 @@
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="rlg" type="text" id="rlg" placeholder="Religion" required="">
+						<input name="religion" type="text" id="religion" placeholder="Religion" required="">
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="cn" type="text" id="cn" placeholder="Contact Number" required="">
+						<input name="contactNum" type="text" id="contactNum" placeholder="Contact Number" required="">
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
@@ -114,42 +120,42 @@
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="nod" type="text" id="nod" placeholder="Number of Dependents" required="">
+						<input name="NumDependents" type="text" id="NumDependents placeholder="Number of Dependents" required="">
 					</fieldset>
 				</div>
 				<div class="col-lg-12">
-						<h5 class ="font-weight-bold">Spuose Personal Information</h5>
+						<h5 class ="font-weight-bold">Spouse Personal Information</h5>
 						<hr>	
 				</div>
 					
 					<div class="col-lg-8 col-sm-12">
 					<fieldset>
-						<input name="name" type="text" id="name" placeholder="Full Name" required="">
+						<input name="spouseFname" type="text" id="spouseFname" placeholder="Full Name" required="">
 					</fieldset>
 					</div>
 					<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="age" type="text" id="age" placeholder="Age" required="">
+						<input name="spouseAge" type="text" id="spouseAge" placeholder="Age" required="">
 					</fieldset>
 					</div>
 					<div class="col-lg-6 col-sm-12">
 					<fieldset>
-						<input name="socc" type="text" id="socc" placeholder="Occupation" required="">
+						<input name="spouseOcc" type="text" id="spouseOcc" placeholder="Occupation" required="">
 					</fieldset>
 					</div>
 					<div class="col-lg-6 col-sm-12">
 					<fieldset>
-						<input name="smi" type="text" id="smi" placeholder="Monthly Income" required="">
+						<input name="spouseMI" type="text" id="spouseMI" placeholder="Monthly Income" required="">
 					</fieldset>
 					</div>
 					<div class="col-lg-6 col-sm-12">
 					<fieldset>
-						<input name="em" type="text" id="em" placeholder="Employer's Name" required="">
+						<input name="spouseEmplrName" type="text" id="spouseEmplrName" placeholder="Employer's Name" required="">
 					</fieldset>
 					</div>
 					<div class="col-lg-6 col-sm-12">
 					<fieldset>
-						<input name="scn" type="text" id="scn" placeholder="Contact Number" required="">
+						<input name="spouseConNum" type="text" id="spouseConNum" placeholder="Contact Number" required="">
 					</fieldset>
 					</div>
 					<div class="col-lg-12">
@@ -158,22 +164,22 @@
 					</div>
 					<div class="col-lg-6 col-sm-12">
 					<fieldset>
-						<input name="b-name" type="text" id="b-name" placeholder="Full Name" required="">
+						<input name="benName" type="text" id="benName" placeholder="Full Name" required="">
 					</fieldset>
 					</div>
 					<div class="col-lg-6 col-sm-12">
 					<fieldset>
-						<input name="rls" type="text" id="rls" placeholder="Relationship" required="">
+						<input name="benRelation" type="text" id="benRelation" placeholder="Relationship" required="">
 					</fieldset>
 					</div>
 					<div class="col-lg-8 col-sm-12">
 					<fieldset>
-						<input name="b-add" type="text" id="badd" placeholder="Address" required="">
+						<input name="benAddress" type="text" id="benAddress" placeholder="Address" required="">
 					</fieldset>
 					</div>
 					<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="b-age" type="text" id="bage" placeholder="Age" required="">
+						<input name="benAge" type="text" id="benAge" placeholder="Age" required="">
 					</fieldset>
 					</div>
 					
@@ -183,26 +189,26 @@
 					</div>
 					<div class="col-lg-4 col-sm-12">
 						<fieldset>
-							<input name="b-Lname" type="text" id="b-Lname" placeholder="Last Name" required="">
+							<input name="benMothersLname" type="text" id="benMothersLname" placeholder="Last Name" required="">
 						</fieldset>
 					</div>
 					<div class="col-lg-4 col-sm-12">
 						<fieldset>
-							<input name="b-Fname" type="text" id="b-Fname" placeholder="First Name" required="">
+							<input name="benMothersFname" type="text" id="benMothersFname" placeholder="First Name" required="">
 						</fieldset>
 					</div>
 					<div class="col-lg-4 col-sm-12">
 						<fieldset>
-							<input name="b-Mname" type="text" id="b-Mname" placeholder="Middle Name" required="">
+							<input name="benMothersMname" type="text" id="benMothersMname" placeholder="Middle Name" required="">
 						</fieldset>
 					</div>
-					<div class="col-lg-12 pb-3">
+					<!-- <div class="col-lg-12 pb-3">
 					<fieldset>
-						<!-- <button type="submit" id="form-submit" class="main-button-icon w-25 mr-5">Add a Benificiary</button> -->
+						<button type="submit" id="form-submit" class="main-button-icon w-25 mr-5">Add a Benificiary</button>
 						<a class="button" href="#" role="button">Add a Benificiary</a>
 					</fieldset>
 					
-				</div> 
+				</div>  -->
 					<div class="col-lg-12">
 						<h5 class ="font-weight-bold mt-2">Government ID Number</h5>
 						<p class="font-weight-lighter">The fields below are optional but we encourageyou to provide the information</p>
@@ -210,12 +216,12 @@
 					</div>
 					<div class="col-lg-4 col-sm-12">
 						<fieldset>
-							<input name="tin" type="text" id="tin" placeholder="Tax Identification Number" required="">
+							<input name="TIN" type="text" id="TIN" placeholder="Tax Identification Number" required="">
 						</fieldset>
 					</div>
 					<div class="col-lg-4 col-sm-12">
 						<fieldset>
-							<input name="sss" type="text" id="sss" placeholder="SSS Number" required="">
+							<input name="SSSnum" type="text" id="SSSnum" placeholder="SSS Number" required="">
 						</fieldset>
 					</div>
 					<div class="col-lg-12">
@@ -224,14 +230,14 @@
 					</div>
 					<div class="col-lg-12">
 						<fieldset>
-						<label class="form-label" for="customFile">Attach Selfie Picture</label>
-						<input type="file" class="w-28 mt-2" id="customFile" >
+						<label class="form-label" for="selfiepic">Attach Selfie Picture</label>
+						<input type="file" class="w-28 mt-2" name="selfiepic" id="selfiepic" required="image" >
 						</fieldset>
 					</div>
 					<div class="col-lg-12">
 						<fieldset>
-						<label class="form-label" for="customFile">Attach Employee ID</label>
-						<input type="file" class="w-28 mt-2" id="customFile" >
+						<label class="form-label" for="empIDpic">Attach Employee ID</label>
+						<input type="file" class="w-28 mt-2" name="empIDpic" id="empIDpic" required="image" >
 						</fieldset>
 					</div>
 
@@ -240,7 +246,7 @@
 				<div class="col-lg-12 pb-3">
 					<fieldset>
 						
-					<button type="button" id="form-submit" class="main-button-icon w-25 mt-5 ">Validate</button>
+					<button type="submit" id="form-submit" class="main-button-icon w-25 mt-5 ">Validate</button>
 					<!-- <a class="btn btn-primary main-button-icon w-25 mt-5 " href="#" role="button">Validate</a> -->
 					</fieldset>
 				</div> 
