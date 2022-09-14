@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\officer;
 
+use App\Models\MembershipApplication;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Membership;
 
-class MembershipAppController extends Controller
+class PreMembershipApplicationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,9 @@ class MembershipAppController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        return view('officer.membership');
+    {
+        $membership = MembershipApplication::where('is_approved', 0)->get();
+        return view('officer.membership-application', compact('membership'));
     }
 
     /**
@@ -34,11 +35,9 @@ class MembershipAppController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function memberapp_list()
+    public function store(Request $request)
     {
-        $member_app = Membership::all();
-        return view('officer.membership')->with('member_app', $member_app);
-        
+        //
     }
 
     /**
@@ -60,7 +59,9 @@ class MembershipAppController extends Controller
      */
     public function edit($id)
     {
-        //
+        $membership = MembershipApplication::find($id);
+        return view('officer.membership-application', compact('membership'));
+
     }
 
     /**
@@ -72,7 +73,11 @@ class MembershipAppController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $membership = MembershipApplication::find($id);
+        $membership->is_approved = $request->is_approved;
+        $membership->save();
+
+        return back();
     }
 
     /**

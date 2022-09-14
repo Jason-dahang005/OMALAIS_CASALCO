@@ -1,22 +1,23 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Membership extends Model
+class MembershipApplication extends Model
 {
-    protected $table='membership_app';
+    use HasFactory;
+
     protected $fillable = [
         'Fname',
         'Mname',
         'Lname',
-        'suffix',
-        'gender',
-        'dob',
-        'Bplace',
-        'address',
+         'suffix',
+         'gender',
+         'dob',
+         'Bplace',
+         'address',
         'unit',
         'occupation',
         'educ',
@@ -41,9 +42,8 @@ class Membership extends Model
         'benMothersLname',
         'benMothersFname',
         'benMothersMname',
-        'selfiepic',
-        'empIDpic'
-
-
+        'status'
+        // 'selfiepic',
+        // 'empIDpic'
     ];
 }

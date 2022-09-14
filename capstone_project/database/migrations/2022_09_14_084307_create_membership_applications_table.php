@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('membership_app', function (Blueprint $table) {
+        Schema::create('membership_applications', function (Blueprint $table) {
             $table->id();
             $table->string('Fname');
             $table->string('Mname');
@@ -26,20 +26,20 @@ return new class extends Migration
             $table->string('unit');
             $table->string('occupation');
             $table->string('educ');
-            $table->integer('MI');
+            $table->string('MI');
             $table->string('civilStatus');
             $table->string('religion');
-            $table->integer('contactNum');
-            $table->integer('TIN');
-            $table->integer('SSSnum');
-            $table->string('email')->unique();
+            $table->string('contactNum');
+            $table->string('TIN');
+            $table->string('SSSnum');
+            $table->string('email');
             $table->string('NumDependents');
             $table->string('spouseFname');
             $table->string('spouseAge');
             $table->string('spouseOcc');
             $table->string('spouseMI');
             $table->string('spouseEmplrName');
-            $table->integer('spouseConNum');
+            $table->string('spouseConNum');
             $table->string('benName');
             $table->string('benRelation');
             $table->string('benAge');
@@ -47,9 +47,9 @@ return new class extends Migration
             $table->string('benMothersLname');
             $table->string('benMothersFname');
             $table->string('benMothersMname');
-            $table->string('selfiepic');
-            $table->string('empIDpic');
-            $table->boolean('is_approved')->default(false);        
+            // $table->string('selfiepic');
+            // $table->string('empIDpic');
+            $table->integer('is_approved')->default(0);        
             $table->timestamps();
         });
     }
@@ -61,6 +61,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('membership_app');
+        Schema::dropIfExists('membership_applications');
     }
 };

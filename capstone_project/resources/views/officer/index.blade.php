@@ -111,6 +111,7 @@
       "info": true,
       "autoWidth": true,
       "responsive": true,
+			order: [[3, 'desc']]
     });
   });
 	</script>
