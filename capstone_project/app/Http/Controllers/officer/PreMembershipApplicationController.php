@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\officer;
 
+use App\Models\MembershipApplication;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Membership;
 
-class MembershipAppController extends Controller
+class PreMembershipApplicationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,12 @@ class MembershipAppController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   $membership=Membership::all();
-        return view('officer.membership', compact('membership'));
+    {   
+        $membership = MembershipApplication::where('is_approved', 0)->get();
+        return view('officer.membership-application', compact('membership'));
     }
+
+    
 
     /**
      * Show the form for creating a new resource.
@@ -40,16 +43,15 @@ class MembershipAppController extends Controller
         
     }
 
-    /**
+     /**
      * Display the specified resource.
      *
-     * @param App\Membership; $membership 
+     * @param  \App\Models\MembershipApplication  $membershipApplication
      * @return \Illuminate\Http\Response
      */
-    public function show(Membership $membership)
+    public function show(MembershipApplication $membershipApplication)
     {
-        $membership=Membership::all(); 
-        return view('officer.membershipForm', compact('membership'));
+        //
     }
 
     /**
@@ -60,7 +62,8 @@ class MembershipAppController extends Controller
      */
     public function edit($id)
     {
-        //
+        $membership = MembershipApplication::find($id);
+        return view('officer.membership-application', compact('membership'));
     }
 
     /**
@@ -72,7 +75,11 @@ class MembershipAppController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $membership = MembershipApplication::find($id);
+        $membership->is_approved = $request->is_approved;
+        $membership->save();
+
+        return back();
     }
 
     /**
