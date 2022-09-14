@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\officer;
+namespace App\Http\Controllers\admin;
 
 use App\Models\MembershipApplication;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class PreMembershipApplicationController extends Controller
+class ApproveMembershipApplication extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,12 +14,10 @@ class PreMembershipApplicationController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        $membership = MembershipApplication::where('is_approved', 0)->get();
-        return view('officer.membership-application', compact('membership'));
+    {
+        $membership = MembershipApplication::where('is_approved', 1)->get();
+        return view('admin.membership', compact('membership'));
     }
-
-    
 
     /**
      * Show the form for creating a new resource.
@@ -39,17 +37,16 @@ class PreMembershipApplicationController extends Controller
      */
     public function store(Request $request)
     {
-        
-        
+        //
     }
 
-     /**
+    /**
      * Display the specified resource.
      *
-     * @param  \App\Models\MembershipApplication  $membershipApplication
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(MembershipApplication $membershipApplication)
+    public function show($id)
     {
         //
     }

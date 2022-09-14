@@ -24,8 +24,8 @@
       <li>
         <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-folder-open orange_color"></i> <span>Applications</span></a>
         <ul class="collapse list-unstyled" id="element">
-          <li><a href="/admin/membership">> <span>Membership</span></a></li>
-          <li><a href="/admin/loan">> <span>Loan</span></a></li>
+          <li><a href="/admin/membership">> <span>Pre-Approved Membership</span></a></li>
+          <li><a href="/admin/loan">> <span>Pre Approved Loan</span></a></li>
         </ul>
       </li>
       <li><a href="/admin/member"><i class="fa fa-users red_color"></i> <span>Members</span></a></li>
