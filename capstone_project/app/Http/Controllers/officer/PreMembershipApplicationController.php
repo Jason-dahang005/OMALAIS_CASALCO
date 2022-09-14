@@ -36,8 +36,7 @@ class MembershipAppController extends Controller
      */
     public function store(Request $request)
     {
-        // $member_app = Membership::all();
-        // return view('officer.membership')->with('member_app', $member_app);
+        
         
     }
 
