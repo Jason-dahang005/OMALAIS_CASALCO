@@ -13,13 +13,13 @@
       </div>
       <div class="col-lg-4">
         <div class="logo">
-          <a href="index.html"><img src="../klassy/images/white-logo.png" alt=""></a>
+          <a href="index.html"><img src="../klassy/images/CasalcoLogo-8.png" alt=""></a>
         </div>
       </div>
       <div class="col-lg-4 col-xs-12">
         <div class="left-text-content">
-          <p>© Copyright Klassy Cafe Co.
-          <br>Design: TemplateMo</p>
+          <!-- <p>© Copyright Klassy Cafe Co.
+          <br>Design: TemplateMo</p> -->
         </div>
       </div>
     </div>

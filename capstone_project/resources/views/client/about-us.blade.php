@@ -30,10 +30,16 @@
               <div class="right-content">
                   <div class="thumb">
                       <a rel="nofollow" href="#"><i class="fa fa-play"></i></a>
-                      <img src="../klassy/images/about-video-bg.jpg" alt="">
+                      <!-- <img src="../klassy/images/about-video-bg.jpg" alt=""> -->
                       <!-- <video>
                         <source src="../klassy/images/Casalco-video.mpg" type="video/mpg">
                       </video> -->
+                      <div id="video-player"> 
+                            <video width="100%" controls> 
+                                <source src="" type="video/mp4"> 
+                                
+                            </video> 
+                    </div> 
                   </div>
               </div>
           </div>
