@@ -106,6 +106,18 @@ Route::view('/admin/member', 'admin.member');
 //     return view('admin.approved-loans');
 // });
 
+<<<<<<< Updated upstream
+=======
+Route::view('/', 'client.home');
+Route::resource('/membership-application', MembershipApplicationController::class);
+Route::view('pre_seminar', 'client.pre_seminar');
+
+Route::view('/officer/dashboard', 'officer.dashboard');
+Route::resource('/officer/membership-application', PreMembershipApplicationController::class);
+Route::view('/admin/dashboard', 'admin.dashboard');
+Route::resource('/admin/membership', ApproveMembershipApplication::class);
+
+>>>>>>> Stashed changes
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

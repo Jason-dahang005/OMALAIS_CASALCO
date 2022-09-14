@@ -74,7 +74,7 @@ class MembershipApplicationController extends Controller
 
         MembershipApplication::create($request->all());
 
-        return redirect('/')->with('success','Membership Application Successfully Sent, Please Just Wait For A Call/Email');
+        return redirect('/pre_seminar')->with('success','Membership Application Successfully Sent, Please Just Wait For A Call/Email');
 
     }
 
