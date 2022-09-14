@@ -2,22 +2,14 @@
 
 @section('client_content')
 
-<!-- @if(session()->get('msg'))
-			<div class="alert alert-success alert-dismissible fade show" role ="alert">
+ 	@if(Session::has('success'))
+		<div class="alert alert-success" role ="alert">
+			{{ Session::get('success') }}
+		</div>
+	@endif
 
-				{{ session()->get('msg')}}
-
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-					
-				</button>
-				
-
-			</div>
-			@endif -->
-
-<div class="contact-form">
-		<form action="membership_app" method="post">
+	<div class="contact-form">
+		<form action="{{ url('/membership-application') }}" method="POST" enctype="multipart/form-data">
 		
 			<div class="row pt-5">
 				<div class="col-lg-2">
@@ -30,7 +22,7 @@
 						<h4 class="pt-5 justify-content-center">Casalco Membership Form</h4>
 						<hr class="line">
 						<h5 class ="font-weight-bold">Personal Information</h5>
-						<p class="font-weight-lighter">We require your personal information to ensure calidty of you memnbership application</p>
+						<p class="font-weight-500">We require your personal information to ensure calidty of you memnbership application</p>
 						<hr>
 						
 					</div>
@@ -40,17 +32,26 @@
 					@csrf	
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="Fname" type="text" id="Fname" placeholder="First Name" required="">
+						<input name="Fname" type="text" id="Fname" placeholder="First Name">
+						<span class="text-danger">@error('Fname')
+								{{ $message }}
+							@enderror </span>
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="Mname" type="text" id="Mname" placeholder="Middle Name" required="">
+						<input name="Mname" type="text" id="Mname" placeholder="Middle Name">
+						<span class="text-danger">@error('Mname')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="Lname" type="text" id="Lname" placeholder="Last Name" required="">
+						<input name="Lname" type="text" id="Lname" placeholder="Last Name">
+						<span class="text-danger">@error('Lname')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
@@ -63,27 +64,33 @@
 						<option value="" disabled selected >Gender</option>
 						<option value="Male">Male</option>
 						<option value="Female">Female</option>
-						
 					</select>
+					<span class="text-danger">@error('gender')
+						{{ $message }}
+					@enderror </span>
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="dob" type="date" id="dob" placeholder="Birthday" required="">
-						<!-- <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
-							<input placeholder="Select date" type="text" name="dob" id="dob" class="form-control">
-							<label for="example">Birthday</label>
-							<i class="fas fa-calendar input-prefix"></i>
-						</div> -->
+						<input name="dob" type="date" id="dob" placeholder="Birthday">
+						<span class="text-danger">@error('dob')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="Bplace" type="text" id="Bplace" placeholder="Birth Place" required="">
+						<input name="Bplace" type="text" id="Bplace" placeholder="Birth Place">
+						<span class="text-danger">@error('Bplace')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="address" type="text" id="suffix" placeholder="Address" required="">
+						<input name="address" type="text" id="suffix" placeholder="Address">
+						<span class="text-danger">@error('address')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
@@ -95,20 +102,32 @@
 						<option value="Support Zebra">Support Zebra</option>
 						<option value="Associate">Associate</option>
 					</select>
+					<span class="text-danger">@error('unit')
+						{{ $message }}
+					@enderror </span>
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="occupation" type="text" id="occupation" placeholder="Occupation" required="">
+						<input name="occupation" type="text" id="occupation" placeholder="Occupation">
+						<span class="text-danger">@error('occupation')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="educ" type="text" id="educ" placeholder="Educ. Attianment" required="">
+						<input name="educ" type="text" id="educ" placeholder="Educ. Attianment">
+						<span class="text-danger">@error('educ')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="MI" type="text" id="MI" placeholder="Monthly Income" required="">
+						<input name="MI" type="text" id="MI" placeholder="Monthly Income">
+						<span class="text-danger">@error('MI')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
@@ -120,25 +139,40 @@
 						<option value="Siparated">Siparated</option>
 						<option value="Widowed">Widowed</option>
 					</select>
+					<span class="text-danger">@error('civilStatus')
+						{{ $message }}
+					@enderror </span>
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="religion" type="text" id="religion" placeholder="Religion" required="">
+						<input name="religion" type="text" id="religion" placeholder="Religion">
+						<span class="text-danger">@error('religion')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="contactNum" type="text" id="contactNum" placeholder="Contact Number" required="">
+						<input name="contactNum" type="text" id="contactNum" placeholder="Contact Number">
+						<span class="text-danger">@error('contactNum')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="email" type="email" id="email" placeholder="Email Address" required="">
+						<input name="email" type="email" id="email" placeholder="Email Address">
+						<span class="text-danger">@error('email')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="NumDependents" type="text" id="NumDependents" placeholder="Number of Dependents" required="">
+						<input name="NumDependents" type="text" id="NumDependents" placeholder="Number of Dependents">
+						<span class="text-danger">@error('NumDependents')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 				</div>
 				<div class="col-lg-12">
@@ -148,32 +182,50 @@
 					
 					<div class="col-lg-8 col-sm-12">
 					<fieldset>
-						<input name="spouseFname" type="text" id="spouseFname" placeholder="Full Name" required="">
+						<input name="spouseFname" type="text" id="spouseFname" placeholder="Full Name">
+						<span class="text-danger">@error('spouseFname')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 					</div>
 					<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="spouseAge" type="text" id="spouseAge" placeholder="Age" required="">
+						<input name="spouseAge" type="text" id="spouseAge" placeholder="Age">
+						<span class="text-danger">@error('spouseAge')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 					</div>
 					<div class="col-lg-6 col-sm-12">
 					<fieldset>
-						<input name="spouseOcc" type="text" id="spouseOcc" placeholder="Occupation" required="">
+						<input name="spouseOcc" type="text" id="spouseOcc" placeholder="Occupation">
+						<span class="text-danger">@error('spouseOcc')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 					</div>
 					<div class="col-lg-6 col-sm-12">
 					<fieldset>
-						<input name="spouseMI" type="text" id="spouseMI" placeholder="Monthly Income" required="">
+						<input name="spouseMI" type="text" id="spouseMI" placeholder="Monthly Income">
+						<span class="text-danger">@error('spouseMI')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 					</div>
 					<div class="col-lg-6 col-sm-12">
 					<fieldset>
-						<input name="spouseEmplrName" type="text" id="spouseEmplrName" placeholder="Employer's Name" required="">
+						<input name="spouseEmplrName" type="text" id="spouseEmplrName" placeholder="Employer's Name">
+						<span class="text-danger">@error('spouseEmplrName')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 					</div>
 					<div class="col-lg-6 col-sm-12">
 					<fieldset>
-						<input name="spouseConNum" type="text" id="spouseConNum" placeholder="Contact Number" required="">
+						<input name="spouseConNum" type="text" id="spouseConNum" placeholder="Contact Number">
+						<span class="text-danger">@error('spouseConNum')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 					</div>
 					<div class="col-lg-12">
@@ -182,22 +234,34 @@
 					</div>
 					<div class="col-lg-6 col-sm-12">
 					<fieldset>
-						<input name="benName" type="text" id="benName" placeholder="Full Name" required="">
+						<input name="benName" type="text" id="benName" placeholder="Full Name">
+						<span class="text-danger">@error('benName')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 					</div>
 					<div class="col-lg-6 col-sm-12">
 					<fieldset>
-						<input name="benRelation" type="text" id="benRelation" placeholder="Relationship" required="">
+						<input name="benRelation" type="text" id="benRelation" placeholder="Relationship">
+						<span class="text-danger">@error('benRelation')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 					</div>
 					<div class="col-lg-8 col-sm-12">
 					<fieldset>
-						<input name="benAddress" type="text" id="benAddress" placeholder="Address" required="">
+						<input name="benAddress" type="text" id="benAddress" placeholder="Address">
+						<span class="text-danger">@error('benAddress')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 					</div>
 					<div class="col-lg-4 col-sm-12">
 					<fieldset>
-						<input name="benAge" type="text" id="benAge" placeholder="Age" required="">
+						<input name="benAge" type="text" id="benAge" placeholder="Age">
+						<span class="text-danger">@error('benAge')
+							{{ $message }}
+						@enderror </span>
 					</fieldset>
 					</div>
 					
@@ -207,17 +271,26 @@
 					</div>
 					<div class="col-lg-4 col-sm-12">
 						<fieldset>
-							<input name="benMothersLname" type="text" id="benMothersLname" placeholder="Last Name" required="">
+							<input name="benMothersLname" type="text" id="benMothersLname" placeholder="Last Name">
+							<span class="text-danger">@error('benMothersLname')
+								{{ $message }}
+							@enderror </span>
 						</fieldset>
 					</div>
 					<div class="col-lg-4 col-sm-12">
 						<fieldset>
-							<input name="benMothersFname" type="text" id="benMothersFname" placeholder="First Name" required="">
+							<input name="benMothersFname" type="text" id="benMothersFname" placeholder="First Name">
+							<span class="text-danger">@error('benMothersFname')
+								{{ $message }}
+							@enderror </span>
 						</fieldset>
 					</div>
 					<div class="col-lg-4 col-sm-12">
 						<fieldset>
-							<input name="benMothersMname" type="text" id="benMothersMname" placeholder="Middle Name" required="">
+							<input name="benMothersMname" type="text" id="benMothersMname" placeholder="Middle Name">
+							<span class="text-danger">@error('benMothersMname')
+								{{ $message }}
+							@enderror </span>
 						</fieldset>
 					</div>
 					<!-- <div class="col-lg-12 pb-3">
@@ -229,17 +302,23 @@
 				</div>  -->
 					<div class="col-lg-12">
 						<h5 class ="font-weight-bold mt-2">Government ID Number</h5>
-						<p class="font-weight-lighter">The fields below are optional but we encourageyou to provide the information</p>
+						<p class="font-weight-500">The fields below are optional but we encourageyou to provide the information</p>
 						<hr>	
 					</div>
 					<div class="col-lg-4 col-sm-12">
 						<fieldset>
-							<input name="TIN" type="text" id="TIN" placeholder="Tax Identification Number" required="">
+							<input name="TIN" type="text" id="TIN" placeholder="Tax Identification Number">
+							<span class="text-danger">@error('TIN')
+								{{ $message }}
+							@enderror </span>
 						</fieldset>
 					</div>
 					<div class="col-lg-4 col-sm-12">
 						<fieldset>
-							<input name="SSSnum" type="text" id="SSSnum" placeholder="SSS Number" required="">
+							<input name="SSSnum" type="text" id="SSSnum" placeholder="SSS Number">
+							<span class="text-danger">@error('SSSnum')
+								{{ $message }}
+							@enderror </span>
 						</fieldset>
 					</div>
 					<div class="col-lg-12">
@@ -249,7 +328,7 @@
 					<div class="col-lg-12">
 						<fieldset>
 						<label class="form-label" for="selfiepic">Attach Selfie Picture</label>
-						<!-- <input type="file" class="w-28 mt-2" name="selfiepic" id="selfiepic" required="image" > -->
+						<!-- <input type="file" class="w-28 mt-2" name="selfiepic" id="selfiepic" > -->
 						<input type="file" class="form-control" id="customFile" name="selfiepic" onchange="previewFile(this)">
 						
 							<img src="" alt="" id="previewImg" style="max-width: 130px; margin-top: 20px;">
@@ -263,7 +342,7 @@
 					<div class="col-lg-12">
 						<fieldset>
 						<label class="form-label" for="empIDpic">Attach Employee ID</label>
-						<input type="file" class="w-28 mt-2" name="empIDpic" id="empIDpic" required="image" >
+						<input type="file" class="w-28 mt-2" name="empIDpic" id="empIDpic" >
 						</fieldset>
 					</div>
 
@@ -281,70 +360,6 @@
 				</div>
 				
 				</div>
-				
-				
-
-				
-				
-				<!-- <div class="col-lg-3 col-sm-12">
-					<fieldset>
-					<input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
-				</fieldset>
-				</div> -->
-				<!-- {{-- <div class="col-lg-6 col-sm-12">
-					<fieldset>
-						<input name="phone" type="text" id="phone" placeholder="Phone Number*" required="">
-					</fieldset>
-				</div>
-				<div class="col-md-6 col-sm-12">
-					<fieldset>
-						<select value="number-guests" name="number-guests" id="number-guests">
-								<option value="number-guests">Number Of Guests</option>
-								<option name="1" id="1">1</option>
-								<option name="2" id="2">2</option>
-								<option name="3" id="3">3</option>
-								<option name="4" id="4">4</option>
-								<option name="5" id="5">5</option>
-								<option name="6" id="6">6</option>
-								<option name="7" id="7">7</option>
-								<option name="8" id="8">8</option>
-								<option name="9" id="9">9</option>
-								<option name="10" id="10">10</option>
-								<option name="11" id="11">11</option>
-								<option name="12" id="12">12</option>
-						</select>
-					</fieldset>
-				</div>
-				<div class="col-lg-6">
-						<div id="filterDate2">    
-							<div class="input-group date" data-date-format="dd/mm/yyyy">
-								<input  name="date" id="date" type="text" class="form-control" placeholder="dd/mm/yyyy">
-								<div class="input-group-addon" >
-									<span class="glyphicon glyphicon-th"></span>
-								</div>
-							</div>
-						</div>   
-				</div>
-				<div class="col-md-6 col-sm-12">
-					<fieldset>
-						<select value="time" name="time" id="time">
-								<option value="time">Time</option>
-								<option name="Breakfast" id="Breakfast">Breakfast</option>
-								<option name="Lunch" id="Lunch">Lunch</option>
-								<option name="Dinner" id="Dinner">Dinner</option>
-						</select>
-					</fieldset>
-				</div> --}} -->
-				<!-- <div class="col-lg-12">
-					<fieldset>
-						<textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
-					</fieldset>
-				</div>
-				<div class="col-lg-12">
-					<fieldset>
-						<button type="submit" id="form-submit" class="main-button-icon">Send A Message</button>
-					</fieldset>
-				</div> -->
 			</div>
 		</form>
 </div>
