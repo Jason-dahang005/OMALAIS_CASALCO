@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\MembershipApplicationController;
 use App\Http\Controllers\officer\PreMembershipApplicationController;
+use App\Http\Controllers\admin\ApproveMembershipApplication;
 
 
 /*
@@ -32,6 +33,8 @@ Route::resource('/membership-application', MembershipApplicationController::clas
 
 Route::view('/officer/dashboard', 'officer.dashboard');
 Route::resource('/officer/membership-application', PreMembershipApplicationController::class);
+Route::view('/admin/dashboard', 'admin.dashboard');
+Route::resource('/admin/membership', ApproveMembershipApplication::class);
 
 Auth::routes();
 
