@@ -3,15 +3,26 @@
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\officer\OfficerDashboardController;
+use App\Http\Controllers\officer\PreMembershipApplicationController;
+use App\Http\Controllers\officer\ReportsMembershipApplicationController;
+
+use  App\Http\Controllers\MembershipApplicationController;
+
+use App\Http\Controllers\admin\AdminDashboardController;
+use App\Http\Controllers\admin\ApproveMembershipApplicationController;
+use App\Http\Controllers\MembershipReportsController;
+
 // use App\Http\Controllers\admin\DashboardController;
 // use App\Http\Controllers\admin\MembershipController;
 // use App\Http\Controllers\admin\LoanController;
 // use App\Http\Controllers\admin\MemberController;
+// use App\Http\Controllers\officer\PreMembershipApplicationController;
+// use App\Http\Controllers\officer\MembershipAppController;
 // use App\Http\Controllers\officer\OfficerDashboardController;
- use App\Http\Controllers\officer\MembershipAppController;
 // use App\Http\Controllers\officer\LoanAppController;
 
-use App\Http\Controllers\client\MembershipController;
+// use App\Http\Controllers\client\MembershipController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,30 +35,30 @@ use App\Http\Controllers\client\MembershipController;
 |
 */
 
-Route::middleware(['auth', 'isAdmin'])->group(function() { 
+// Route::middleware(['auth', 'isAdmin'])->group(function() { 
   // ADMIN SIDE START ----------------------------------------------------------
 
-  Route::view('/admin/dashboard', 'admin.dashboard');
-  Route::view('/admin/membership', 'admin.membership');
-  Route::view('/admin/loan', 'admin.loan');
-  Route::view('/admin/approved-loans', 'admin.approved-loans');
-  Route::view('/admin/member', 'admin.member');
+//   Route::view('/admin/dashboard', 'admin.dashboard');
+//   Route::view('/admin/membership', 'admin.membership');
+//   Route::view('/admin/loan', 'admin.loan');
+//   Route::view('/admin/approved-loans', 'admin.approved-loans');
+//   Route::view('/admin/member', 'admin.member');
 
   // ADMIN SIDE END  -----------------------------------------------------------
-});
+// });
 
 
 // CLIENT SIDE START ---------------------------------------------------------
 
-Route::view('/', 'client.home');
-Route::view('/regular-loans', 'client.regular-loans');
-Route::view('/express-loans', 'client.express-loans');
-Route::view('/special-loans', 'client.special-loans');
-Route::view('/contact-us', 'client.contact-us');
-Route::view('/about-us', 'client.about-us');
-Route::view('/membership-application', 'client.membership-application');
-Route::post('/membership_app',[MembershipController::class, 'membership_app']);
-Route::view('/pre_seminar', 'client.pre_seminar');
+// Route::view('/', 'client.home');
+// Route::view('/regular-loans', 'client.regular-loans');
+// Route::view('/express-loans', 'client.express-loans');
+// Route::view('/special-loans', 'client.special-loans');
+// Route::view('/contact-us', 'client.contact-us');
+// Route::view('/about-us', 'client.about-us');
+// Route::view('/membership-application', 'client.membership-application');
+// Route::post('/membership_app',[MembershipController::class, 'membership_app']);
+// Route::view('/pre_seminar', 'client.pre_seminar');
 
 
 
@@ -57,8 +68,9 @@ Route::view('/pre_seminar', 'client.pre_seminar');
 // ===================================================================================================================
 
 // OFFICER SIDE START --------------------------------------------------------
-Route::resource('membership',App\Http\Controllers\officer\MembershipAppController::class);
-Route::resource('/officer/membership',App\Http\Controllers\officer\MembershipAppController::class);
+// Route::resource('/officer/dashboard', OfficerDashboardController::class);
+// Route::resource('membership',App\Http\Controllers\officer\MembershipAppController::class);
+// Route::resource('/officer/membership-application', PreMembershipApplicationController::class);
 // Route::view('/officer/dashboard', 'officer.dashboard');
 // Route::view('/officer/loan', 'officer.loan');
 // Route::view('/officer/membership', 'officer.membership');
@@ -71,11 +83,11 @@ Route::resource('/officer/membership',App\Http\Controllers\officer\MembershipApp
 
 // ADMIN SIDE START ----------------------------------------------------------
 
-Route::view('/admin/dashboard', 'admin.dashboard');
-Route::view('/admin/membership', 'admin.membership');
-Route::view('/admin/loan', 'admin.loan');
-Route::view('/admin/approved-loans', 'admin.approved-loans');
-Route::view('/admin/member', 'admin.member');
+// Route::view('/admin/dashboard', 'admin.dashboard');
+// Route::view('/admin/membership', 'admin.membership');
+// Route::view('/admin/loan', 'admin.loan');
+// Route::view('/admin/approved-loans', 'admin.approved-loans');
+// Route::view('/admin/member', 'admin.member');
 
 // ADMIN SIDE END  -----------------------------------------------------------
 
@@ -107,5 +119,20 @@ Route::view('/admin/member', 'admin.member');
 // });
 
 Auth::routes();
+Route::view("/", "client.home");
+Route::view('/regular-loans', 'client.regular-loans');
+Route::view('/special-loans', 'client.special-loans');
+Route::view('/express-loans', 'client.express-loans');
+Route::view('/contact-us', 'client.contact-us');
+Route::view('/about-us', 'client.about-us');
+Route::resource('/membership-application', MembershipApplicationController::class);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('/officer/dashboard', OfficerDashboardController::class);
+Route::resource('/officer/membership-application', PreMembershipApplicationController::class);
+Route::resource('/officer/pre-approved-membership', ReportsMembershipApplicationController::class);
+
+Route::resource('/admin/dashboard', AdminDashboardController::class);
+Route::resource('/admin/membership', ApproveMembershipApplicationController::class);
+Route::resource('/admin/approved-membership', MembershipReportsController::class);
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -2,6 +2,58 @@
 
 @section('client_content')
 <div id="top">
+	<div class="row">
+		<div class="col-lg-4"></div>
+		<div class="col-lg-4">
+			<div class="contact-form">
+				<form method="POST" action="{{ route('login') }}">
+					@csrf
+					<div class="row border py-5 px-4">
+						<div class="col-lg-12">
+							<div class="py-3">
+								<div class="text-center">
+									<h4>LOGIN</h4>
+								</div>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="form-group">
+								<fieldset>
+									<label for="">Email</label>
+								<input name="email" type="email" id="email" placeholder="Your Email Address">
+								@error('email')<span class="text-danger"><strong>{{ $message }}</strong></span>@enderror
+							</fieldset>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="form-group">
+								<fieldset>
+									<label for="">Password</label>
+								<input name="password" type="password" id="password" placeholder="Your Password">
+								@error('password')<span class="text-danger"><strong>{{ $message }}</strong></span>@enderror
+							</fieldset>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="form-group">
+								<fieldset>
+								<button type="submit">LOGIN</button>
+							</fieldset>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="text-right">
+								<p>Don't have an account? <a href="/register">Register here</a></p>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="col-lg-4"></div>
+	</div>
+</div>
+{{-- <div id="top">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -71,5 +123,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 @endsection

@@ -28,6 +28,10 @@
 	<link rel="stylesheet" href="../pluto/css/perfect-scrollbar.css" />
 	<!-- custom css -->
 	<link rel="stylesheet" href="../pluto/css/custom.css" />
+    <!-- DataTables -->
+  <link rel="stylesheet" href="{{ asset('/pluto/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('/pluto/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('/pluto/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
 </head>
 <body class="">
 	<div id="body" class="dashboard dashboard_1">
@@ -78,5 +82,36 @@
 	<!-- custom js -->
 	<script src="../pluto/js/custom.js"></script>
 	<script src="../pluto/js/chart_custom_style1.js"></script>
+    <!-- DataTables  & Plugins -->
+	<script src="{{ asset('/pluto/datatables/jquery.dataTables.min.js') }}"></script>
+	<script src="{{ asset('/pluto/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+	<script src="{{ asset('/pluto/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
+	<script src="{{ asset('/pluto/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
+	<script src="{{ asset('/pluto/datatables-buttons/js/dataTables.buttons.min.js') }}"></script>
+	<script src="{{ asset('/pluto/datatables-buttons/js/buttons.bootstrap4.min.js') }}"></script>
+	<script src="{{ asset('/pluto/jszip/jszip.min.js') }}"></script>
+	<script src="{{ asset('/pluto/pdfmake/pdfmake.min.js') }}"></script>
+	<script src="{{ asset('/pluto/pdfmake/vfs_fonts.js') }}"></script>
+	<script src="{{ asset('/pluto/datatables-buttons/js/buttons.html5.min.js') }}"></script>
+	<script src="{{ asset('/pluto/datatables-buttons/js/buttons.print.min.js') }}"></script>
+	<script src="{{ asset('/pluto/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
+    <script>
+		$(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": true, "autoWidth": true,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": true,
+      "searching": true,
+      "ordering": true,
+      "info": true,
+      "autoWidth": true,
+      "responsive": true,
+			order: [[3, 'desc']]
+    });
+  });
+	</script>
 </body>
 </html>

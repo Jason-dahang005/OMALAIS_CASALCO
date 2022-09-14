@@ -1,6 +1,6 @@
-@extends('officer.index')
-@section('title', 'Membership')
-@section('officer_content')
+@extends('admin.index')
+@section('title', 'Approved Membership Applications')
+@section('admin_content')
 
 <table class="table table-bordered table-striped table-sm" id="example2">
 	<thead>
@@ -8,7 +8,7 @@
       <th>First Name</th>
       <th>Last Name</th>
       <th>Unit</th>
-      <th>Date Pre-approved</th>
+      <th>Date Approved</th>
       <th>Status</th>
       {{-- <th>Actions</th> --}}
     </tr>

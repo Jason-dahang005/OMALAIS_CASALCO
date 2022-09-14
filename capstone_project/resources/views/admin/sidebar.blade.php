@@ -29,39 +29,13 @@
         </ul>
       </li>
       <li><a href="/admin/member"><i class="fa fa-users red_color"></i> <span>Members</span></a></li>
-      <li><a href="/admin/approved-loans"><i class="fa fa-clipboard blue1_color"></i> <span>Approved Loans</span></a></li>
-      {{-- <li>
-        <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clipboard blue2_color"></i> <span>Reports</span></a>
-        <ul class="collapse list-unstyled" id="apps">
-          <li><a href="email.html">> <span>Approved Loans</span></a></li>
-          <li><a href="calendar.html">> <span>Calendar</span></a></li>
-          <li><a href="media_gallery.html">> <span>Media Gallery</span></a></li>
-        </ul>
-      </li>
       <li>
-        <a href="contact.html">
-        <i class="fa fa-paper-plane red_color"></i> <span>Contact</span></a>
-      </li>
-      <li class="active">
-        <a href="#additional_page" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clone yellow_color"></i> <span>Additional Pages</span></a>
-        <ul class="collapse list-unstyled" id="additional_page">
-          <li>
-            <a href="profile.html">> <span>Profile</span></a>
-          </li>
-          <li>
-            <a href="project.html">> <span>Projects</span></a>
-          </li>
-          <li>
-            <a href="login.html">> <span>Login</span></a>
-          </li>
-          <li>
-            <a href="404_error.html">> <span>404 Error</span></a>
-          </li>
+        <a href="#element1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clipboard blue1_color"></i> <span>Reports</span></a>
+        <ul class="collapse list-unstyled" id="element1">
+          <li><a href="/admin/approved-membership">> <span>Approved Memberships</span></a></li>
+          <li><a href="/admin/loan">> <span>Approved Loans</span></a></li>
         </ul>
       </li>
-      <li><a href="map.html"><i class="fa fa-map purple_color2"></i> <span>Map</span></a></li>
-      <li><a href="charts.html"><i class="fa fa-bar-chart-o green_color"></i> <span>Charts</span></a></li>
-      <li><a href="settings.html"><i class="fa fa-cog yellow_color"></i> <span>Settings</span></a></li> --}}
     </ul>
   </div>
  </nav>

@@ -12,8 +12,8 @@
     </div>
     <div class="counter_no">
       <div>
-      <p class="total_no">2500</p>
-      <p class="head_couter">Welcome</p>
+      <p class="total_no">0</p>
+      <p class="head_couter">Total Number of Members</p>
       </div>
     </div>
     </div>
@@ -22,13 +22,13 @@
     <div class="full counter_section margin_bottom_30">
     <div class="couter_icon">
       <div> 
-      <i class="fa fa-clock-o blue1_color"></i>
+      <i class="fa fa-folder blue1_color"></i>
       </div>
     </div>
     <div class="counter_no">
       <div>
-      <p class="total_no">123.50</p>
-      <p class="head_couter">Average Time</p>
+      <p class="total_no">{{ count($membership) }}</p>
+      <p class="head_couter">Pending Membership Application</p>
       </div>
     </div>
     </div>
@@ -37,34 +37,19 @@
     <div class="full counter_section margin_bottom_30">
     <div class="couter_icon">
       <div> 
-      <i class="fa fa-cloud-download green_color"></i>
+      <i class="fa fa-money green_color"></i>
       </div>
     </div>
     <div class="counter_no">
       <div>
-      <p class="total_no">1,805</p>
-      <p class="head_couter">Collections</p>
-      </div>
-    </div>
-    </div>
-  </div>
-  <div class="col-md-6 col-lg-3">
-    <div class="full counter_section margin_bottom_30">
-    <div class="couter_icon">
-      <div> 
-      <i class="fa fa-comments-o red_color"></i>
-      </div>
-    </div>
-    <div class="counter_no">
-      <div>
-      <p class="total_no">54</p>
-      <p class="head_couter">Comments</p>
+      <p class="total_no">0</p>
+      <p class="head_couter">Pending Loan <br> Application</p>
       </div>
     </div>
     </div>
   </div>
  </div>
- <div class="row column1 social_media_section">
+ {{-- <div class="row column1 social_media_section">
   <div class="col-md-6 col-lg-3">
      <div class="full socile_icons fb margin_bottom_30">
         <div class="social_icon">
@@ -141,10 +126,10 @@
         </div>
      </div>
   </div>
-</div>
+</div> --}}
 
 <!-- graph -->
-<div class="row column2 graph margin_bottom_30">
+{{-- <div class="row column2 graph margin_bottom_30">
   <div class="col-md-l2 col-lg-12">
      <div class="white_shd full">
         <div class="full graph_head">
@@ -165,10 +150,10 @@
         </div>
      </div>
   </div>
-</div>
-<div class="row column3">
+</div> --}}
+{{-- <div class="row column3"> --}}
 <!-- testimonial -->
-<div class="col-md-6">
+{{-- <div class="col-md-6">
    <div class="dark_bg full margin_bottom_30">
       <div class="full graph_head">
          <div class="heading1 margin_0">
@@ -211,10 +196,10 @@
          </div>
       </div>
    </div>
-</div>
+</div> --}}
 <!-- end testimonial -->
 <!-- progress bar -->
-<div class="col-md-6">
+{{-- <div class="col-md-6">
    <div class="white_shd full margin_bottom_30">
       <div class="full graph_head">
          <div class="heading1 margin_0">
@@ -256,9 +241,9 @@
          </div>
       </div>
    </div>
-</div>
+</div> --}}
 <!-- end progress bar -->
-</div>
+{{-- </div>
 <div class="row column4 graph">
 <div class="col-md-6 margin_bottom_30">
    <div class="dash_blog">
@@ -335,6 +320,6 @@
       </div>
    </div>
 </div>
-</div>
+</div> --}}
 
 @endsection
