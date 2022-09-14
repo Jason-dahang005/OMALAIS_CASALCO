@@ -24,6 +24,16 @@
 								<!-- Item -->
 								<div class="item">
 									<div class="img-fill">
+										<video width="100%" controls muted autoplay loop> 
+                                            <source src="../klassy/images/Casalco-video.mp4" type="video/mp4"> 
+                                            
+                                        </video> 
+									</div>
+								</div>
+								<!-- // Item -->
+                                <!-- Item -->
+								<div class="item">
+									<div class="img-fill">
 										<img src="../klassy/images/Casalco-1.jpg" alt="">
 									</div>
 								</div>
@@ -43,11 +53,11 @@
 								</div>
 								<!-- // Item -->
 								<!-- Item -->
-								<div class="item">
+								<!-- <div class="item">
 									<div class="img-fill">
 										<img src="../klassy/images/Casalco-5.jpg" alt="">
 									</div>
-								</div>
+								</div> -->
 								<!-- // Item -->
 								<!-- Item -->
 								<div class="item">
