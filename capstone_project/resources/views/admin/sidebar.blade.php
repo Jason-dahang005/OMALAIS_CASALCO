@@ -29,6 +29,7 @@
         </ul>
       </li>
       <li><a href="/admin/member"><i class="fa fa-users red_color"></i> <span>Members</span></a></li>
+      <li><a href="/admin/member"><i class="fa fa-users red_color"></i> <span>Users</span></a></li>
       <li><a href="/admin/approved-loans"><i class="fa fa-clipboard blue1_color"></i> <span>Approved Loans</span></a></li>
       {{-- <li>
         <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-clipboard blue2_color"></i> <span>Reports</span></a>
