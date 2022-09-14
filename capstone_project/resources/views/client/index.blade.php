@@ -26,7 +26,7 @@
 
 	@yield('client_content')
 
-	@if(!Request::is("login") && !Request::is("register") && !Request::is("membership-application"))
+	@if(!Request::is("login") && !Request::is("register") && !Request::is("membership-application") && !Request::is("pre_seminar") )
 		@include('client.footer')
 	@endif
 

@@ -14,8 +14,8 @@ class MembershipAppController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        return view('officer.membership');
+    {   $membership=Membership::all();
+        return view('officer.membership', compact('membership'));
     }
 
     /**
@@ -34,22 +34,23 @@ class MembershipAppController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function memberapp_list()
+    public function store(Request $request)
     {
-        $member_app = Membership::all();
-        return view('officer.membership')->with('member_app', $member_app);
+        // $member_app = Membership::all();
+        // return view('officer.membership')->with('member_app', $member_app);
         
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param App\Membership; $membership 
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Membership $membership)
     {
-        //
+        $membership=Membership::all(); 
+        return view('officer.membershipForm', compact('membership'));
     }
 
     /**

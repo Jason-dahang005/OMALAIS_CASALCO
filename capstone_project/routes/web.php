@@ -57,13 +57,14 @@ Route::view('/pre_seminar', 'client.pre_seminar');
 // ===================================================================================================================
 
 // OFFICER SIDE START --------------------------------------------------------
-
-Route::view('/officer/dashboard', 'officer.dashboard');
-Route::view('/officer/loan', 'officer.loan');
-Route::view('/officer/membership', 'officer.membership');
-Route::view('/officer/pre-approve-loans', 'officer.pre-approve-loans');
-Route::view('/officer/pre-approved-membership', 'officer.pre-approved-membership');
-Route::get('/officer/membership',[MembershipAppController::class, 'memberapp_list']);
+Route::resource('membership',App\Http\Controllers\officer\MembershipAppController::class);
+Route::resource('/officer/membership',App\Http\Controllers\officer\MembershipAppController::class);
+// Route::view('/officer/dashboard', 'officer.dashboard');
+// Route::view('/officer/loan', 'officer.loan');
+// Route::view('/officer/membership', 'officer.membership');
+// Route::view('/officer/pre-approve-loans', 'officer.pre-approve-loans');
+// Route::view('/officer/pre-approved-membership', 'officer.pre-approved-membership');
+// Route::get('/officer/membership',[MembershipAppController::class, 'memberapp_list']);
 // OFFICER SIDE END   --------------------------------------------------------
 
 // ===================================================================================================================

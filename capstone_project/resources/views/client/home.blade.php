@@ -114,13 +114,13 @@
 <!-- ***** Menu Area Ends ***** -->
 
 <!-- ***** Chefs Area Starts ***** -->
-{{-- <section class="section" id="chefs">
+<section class="section" id="chefs">
   <div class="container">
 		<div class="row">
 			<div class="col-lg-4 offset-lg-4 text-center">
 				<div class="section-heading">
-					<h6>Our Chefs</h6>
-					<h2>We offer the best ingredients for you</h2>
+					<h6>Our Loans</h6>
+					<h2>We offer the best product for you</h2>
 				</div>
 			</div>
 		</div>
@@ -129,16 +129,19 @@
 				<div class="chef-item">
 					<div class="thumb">
 						<div class="overlay"></div>
-						<ul class="social-icons">
+						<!-- <ul class="social-icons">
 							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-						</ul>
-						<img src="../klassy/images/chefs-01.jpg" alt="Chef #1">
+						</ul> -->
+						<img src="../klassy/images/RegularLoan.png" alt="Chef #1">
 					</div>
 					<div class="down-content">
-						<h4>Randy Walker</h4>
-						<span>Pastry Chef</span>
+						<h4>Regular Loans</h4>
+						<span>Appliance Loan</span> <br>
+                        <span>Commercial Loan</span> <br>
+                        <span>Provident Loan</span> <br>
+                        <span>Regular Loan</span>
 					</div>
 				</div>
 			</div>
@@ -146,16 +149,19 @@
 				<div class="chef-item">
 					<div class="thumb">
 						<div class="overlay"></div>
-						<ul class="social-icons">
+						<!-- <ul class="social-icons">
 							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 							<li><a href="#"><i class="fa fa-behance"></i></a></li>
-						</ul>
-						<img src="../klassy/images/chefs-02.jpg" alt="Chef #2">
+						</ul> -->
+						<img src="../klassy/images/ExpressLoan.jpg" alt="Chef #2">
 					</div>
 					<div class="down-content">
-						<h4>David Martin</h4>
-						<span>Cookie Chef</span>
+						<h4>Express Loans</h4>
+						<span>Grocery Loan</span> <br>
+                        <span>Pettycash Loan</span> <br>
+                        <span>Fasrcash Loan</span> <br>
+                        <span>Insacash Loan</span>
 					</div>
 				</div>
 			</div>
@@ -163,34 +169,37 @@
 				<div class="chef-item">
 					<div class="thumb">
 						<div class="overlay"></div>
-						<ul class="social-icons">
+						<!-- <ul class="social-icons">
 							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 							<li><a href="#"><i class="fa fa-google"></i></a></li>
-						</ul>
-						<img src="../klassy/images/chefs-03.jpg" alt="Chef #3">
+						</ul> -->
+						<img src="../klassy/images/RegularLoan.png" alt="Chef #3">
 					</div>
 					<div class="down-content">
-						<h4>Peter Perkson</h4>
-						<span>Pancake Chef</span>
+						<h4>Special Loans</h4>
+						<span>Midyear & Christmas Promo Loan</span> <br>
+                        <span>Educational Loan</span> <br>
+                        <span>Multi-Purpose Loan</span> <br>
+                        <span>Privilege Loan</span>
 					</div>
 				</div>
 			</div>
 		</div>
   </div>
-</section> --}}
+</section>
 <!-- ***** Chefs Area Ends ***** -->
 
 
 
 <!-- ***** Menu Area Starts ***** -->
-{{-- <section class="section" id="offers">
+ <section class="section" id="offers">
   <div class="container">
       <div class="row">
           <div class="col-lg-4 offset-lg-4 text-center">
               <div class="section-heading">
-                  <h6>Klassy Week</h6>
-                  <h2>This Week’s Special Meal Offers</h2>
+                  <h6>Our</h6>
+                  <h2>Clients</h2>
               </div>
           </div>
       </div>
@@ -201,16 +210,35 @@
                       <div class="heading-tabs">
                           <div class="row">
                               <div class="col-lg-6 offset-lg-3">
-                                  <ul>
-                                    <li><a href='#tabs-1'><img src="../klassy/images/tab-icon-01.png" alt="">Breakfast</a></li>
-                                    <li><a href='#tabs-2'><img src="../klassy/images/tab-icon-02.png" alt="">Lunch</a></a></li>
-                                    <li><a href='#tabs-3'><img src="../klassy/images/tab-icon-03.png" alt="">Dinner</a></a></li>
-                                  </ul>
+                                  <!-- <ul>
+                                    <li><a href='#tabs-1'><img src="../klassy/images/CU-Logo.jpg" alt="">Breakfast</a></li>
+                                    <li><a href='#tabs-2'><img src="../klassy/images/CUBEd.jpg" alt="">Lunch</a></a></li>
+                                    <li><a href='#tabs-3'><img src="../klassy/images/cumc-logo-heading-svg.svg" alt="">Dinner</a></a></li>
+                                  </ul> -->
+                                            <section class="section" id="about">
+                                                    
+                                                    <div class="row">
+                                                                        <div class="col-4">
+                                                                            <img src="../klassy/images/CU-Logo.jpg" alt="">
+                                                                        </div>
+                                                                        <div class="col-4">
+                                                                            <img src="../klassy/images/CUBEd.jpg" alt="">
+                                                                        </div>
+                                                                        <div class="col-4">
+                                                                            <img src="../klassy/images/cumc-logo-heading-svg.svg" alt="">
+                                                                        </div>
+                                                           
+                                                    </div>
+                                            </section>
                               </div>
                           </div>
                       </div>
                   </div>
-                  <div class="col-lg-12">
+            </div>
+        </div>
+    </div>
+    </section>
+                  {{-- <div class="col-lg-12">
                       <section class='tabs-content'>
                           <article id='tabs-1'>
                               <div class="row">
